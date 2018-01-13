@@ -11,6 +11,10 @@
 
 	
 	TRIGGER PROCEDURE FOR WRITE OF Customer OLD BUFFER oldCustomer.
+    
+    IF Customer.FirstName = "" OR Customer.LastName = "" OR Customer.IdCode = "" THEN
+        RETURN ERROR "All fields must be filled".
+    
     DEFINE VARIABLE update_text AS CHARACTER. 
     update_text = 'Update: '.
     IF oldCustomer.FirstName <> Customer.FirstName THEN DO:
@@ -30,4 +34,5 @@
         CustomerHistory.FirstName = Customer.FirstName
         CustomerHistory.LastName = Customer.LastName
         CustomerHistory.IdCode = Customer.IdCode
+        CustomerHistory.HistoryTime = NOW.
         CustomerHistory.Edit = update_text.
