@@ -34,6 +34,7 @@ DEFINE TEMP-TABLE ttCustomerHistory BEFORE-TABLE bttCustomerHistory
     FIELD LastName AS CHARACTER
     FIELD IdCode AS CHARACTER
     FIELD Edit AS CHARACTER
+    FIELD HistoryTime AS DATETIME
     INDEX CustomerHistoryId IS  PRIMARY   CustomerHistoryId  ASCENDING . 
 
 DEFINE DATASET dsViewCustomerHistory
