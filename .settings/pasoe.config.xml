@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PASOEConfigDetails version="11.7">
+<webapp>ProjectServer</webapp>
+<servers>
+<server>oepas1 in desktop-ss2dcrm.oepas1 (Progress Application Server for OpenEdge 11.7)</server>
+</servers>
+</PASOEConfigDetails>

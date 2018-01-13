@@ -1,0 +1,1338 @@
+{
+    "version": "1.4",
+    "lastModified": "Wed Jan 10 23:41:10 EET 2018",
+    "services": [{
+        "name": "ProjectServerService",
+        "address": "\/rest\/ProjectServerService",
+        "useRequest": true,
+        "resources": [
+            {
+                "name": "beContract",
+                "path": "\/beContract",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsContract": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttContract": {
+                            "type": "array",
+                            "primaryKey": ["ContractId"],
+                            "foreignKeys": [{
+                                "fields": ["CustomerId"],
+                                "parent": {
+                                    "name": "beCustomer.ttCustomer",
+                                    "fields": ["CustomerId"]
+                                }
+                            }],
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "ContractId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractId",
+                                        "required": true
+                                    },
+                                    "ContractNr": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "ContractNr",
+                                        "required": true
+                                    },
+                                    "CustomerId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "CustomerId",
+                                        "required": true
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "Amount",
+                                        "semanticType": {
+                                            "type": "Integer",
+                                            "min": 0,
+                                            "max": 999
+                                        }
+                                    },
+                                    "AmountLeft": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "AmountLeft"
+                                    },
+                                    "ContractStatus": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractStatus"
+                                    },
+                                    "TimeIn": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeIn",
+                                        "format": "date-time"
+                                    },
+                                    "TimeEnded": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeEnded",
+                                        "format": "date-time"
+                                    },
+                                    "PaymentDate": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "PaymentDate",
+                                        "format": "date-time"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsContract",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsContract",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsContract",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beContractHistory",
+                "path": "\/beContractHistory",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsContractHistory": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttContractHistory": {
+                            "type": "array",
+                            "primaryKey": ["ContractHistoryId"],
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "ContractHistoryId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractHistoryId",
+                                        "required": true
+                                    },
+                                    "CustomerId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "CustomerId"
+                                    },
+                                    "ContractNr": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "ContractNr"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "Amount"
+                                    },
+                                    "AmountLeft": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "AmountLeft"
+                                    },
+                                    "ContractStatus": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractStatus"
+                                    },
+                                    "ContractId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractId",
+                                        "required": true
+                                    },
+                                    "TimeIn": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeIn",
+                                        "format": "date-time"
+                                    },
+                                    "TimeEnded": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeEnded",
+                                        "format": "date-time"
+                                    },
+                                    "PaymentDate": {
+                                        "type": "number",
+                                        "ablType": "DECIMAL",
+                                        "default": 0,
+                                        "title": "PaymentDate"
+                                    },
+                                    "Edit": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "Edit"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beCustomer",
+                "path": "\/beCustomer",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsCustomer": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttCustomer": {
+                            "type": "array",
+                            "primaryKey": ["IdCode"],
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "CustomerId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "CustomerId",
+                                        "required": true
+                                    },
+                                    "IdCode": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "IdCode",
+                                        "required": true
+                                    },
+                                    "FirstName": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "FirstName",
+                                        "required": true
+                                    },
+                                    "LastName": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "LastName",
+                                        "required": true
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsCustomer",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsCustomer",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsCustomer",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beCustomerContracts",
+                "path": "\/beCustomerContracts",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsCustomerContracts": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "ttCustomer": {
+                                "type": "array",
+                                "primaryKey": ["CustomerId"],
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId"
+                                        },
+                                        "FirstName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "FirstName"
+                                        },
+                                        "LastName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "LastName"
+                                        },
+                                        "IdCode": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "IdCode"
+                                        }
+                                    }
+                                }
+                            },
+                            "ttContract": {
+                                "type": "array",
+                                "primaryKey": ["ContractId"],
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "ContractId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractId"
+                                        },
+                                        "ContractNr": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "ContractNr"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId"
+                                        },
+                                        "Amount": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "Amount"
+                                        },
+                                        "AmountLeft": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "AmountLeft"
+                                        },
+                                        "ContractStatus": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractStatus"
+                                        },
+                                        "TimeIn": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeIn",
+                                            "format": "date-time"
+                                        },
+                                        "TimeEnded": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeEnded",
+                                            "format": "date-time"
+                                        },
+                                        "PaymentDate": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "PaymentDate",
+                                            "format": "date-time"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }}
+                },
+                "relations": [{
+                    "relationName": "drCustomerContracts",
+                    "parentName": "ttCustomer",
+                    "childName": "ttContract",
+                    "relationFields": [{
+                        "parentFieldName": "CustomerId",
+                        "childFieldName": "CustomerId"
+                    }]
+                }],
+                "operations": [
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsCustomerContracts",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "GetttCustomer",
+                        "path": "\/GetttCustomer",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "GetttContract",
+                        "path": "\/GetttContract",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "bePayments",
+                "path": "\/bePayments",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsPaymentHistory": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttPaymentHistory": {
+                            "type": "array",
+                            "foreignKeys": [{
+                                "fields": ["ContractNr"],
+                                "parent": {
+                                    "name": "beContract.ttContract",
+                                    "fields": ["ContractNr"]
+                                }
+                            }],
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "PaymentHistoryId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "PaymentHistoryId",
+                                        "required": true
+                                    },
+                                    "PaymentAmount": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "PaymentAmount",
+                                        "required": true
+                                    },
+                                    "PaymentTime": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "PaymentTime",
+                                        "format": "date-time"
+                                    },
+                                    "ContractNr": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "ContractNr"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsPaymentHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beViewCustomerHistory",
+                "path": "\/beViewCustomerHistory",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsViewCustomerHistory": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "ttCustomer": {
+                                "type": "array",
+                                "primaryKey": ["IdCode"],
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId",
+                                            "required": true
+                                        },
+                                        "IdCode": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "IdCode"
+                                        },
+                                        "FirstName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "FirstName"
+                                        },
+                                        "LastName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "LastName"
+                                        }
+                                    }
+                                }
+                            },
+                            "ttCustomerHistory": {
+                                "type": "array",
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "CustomerHistoryId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerHistoryId"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId"
+                                        },
+                                        "FirstName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "FirstName"
+                                        },
+                                        "LastName": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "LastName"
+                                        },
+                                        "IdCode": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "IdCode"
+                                        },
+                                        "Edit": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "Edit"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }}
+                },
+                "relations": [{
+                    "relationName": "drViewCustomerHistory",
+                    "parentName": "ttCustomer",
+                    "childName": "ttCustomerHistory",
+                    "relationFields": [{
+                        "parentFieldName": "CustomerId",
+                        "childFieldName": "CustomerId"
+                    }]
+                }],
+                "operations": [
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "GetttCustomer",
+                        "path": "\/GetttCustomer",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttCustomer",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "GetttCustomerHistory",
+                        "path": "\/GetttCustomerHistory",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttCustomerHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewCustomerHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beViewHistory",
+                "path": "\/beViewHistory",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsViewHistory": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "ttContract": {
+                                "type": "array",
+                                "primaryKey": ["ContractId"],
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "ContractId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractId"
+                                        },
+                                        "ContractNr": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "ContractNr"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId"
+                                        },
+                                        "Amount": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "Amount"
+                                        },
+                                        "AmountLeft": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "AmountLeft"
+                                        },
+                                        "ContractStatus": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractStatus"
+                                        },
+                                        "TimeIn": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeIn",
+                                            "format": "date-time"
+                                        },
+                                        "TimeEnded": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeEnded",
+                                            "format": "date-time"
+                                        },
+                                        "PaymentDate": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "PaymentDate",
+                                            "format": "date-time"
+                                        }
+                                    }
+                                }
+                            },
+                            "ttContractHistory": {
+                                "type": "array",
+                                "primaryKey": ["ContractHistoryId"],
+                                "items": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "_errorString": {
+                                            "type": "string",
+                                            "semanticType": "Internal"
+                                        },
+                                        "ContractHistoryId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractHistoryId"
+                                        },
+                                        "CustomerId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "CustomerId"
+                                        },
+                                        "ContractNr": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "ContractNr"
+                                        },
+                                        "Amount": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "Amount"
+                                        },
+                                        "AmountLeft": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "AmountLeft"
+                                        },
+                                        "ContractStatus": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractStatus"
+                                        },
+                                        "ContractId": {
+                                            "type": "integer",
+                                            "ablType": "INTEGER",
+                                            "default": 0,
+                                            "title": "ContractId"
+                                        },
+                                        "TimeIn": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeIn",
+                                            "format": "date-time"
+                                        },
+                                        "TimeEnded": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "TimeEnded",
+                                            "format": "date-time"
+                                        },
+                                        "PaymentDate": {
+                                            "type": "number",
+                                            "ablType": "DECIMAL",
+                                            "default": 0,
+                                            "title": "PaymentDate"
+                                        },
+                                        "Edit": {
+                                            "type": "string",
+                                            "ablType": "CHARACTER",
+                                            "default": "",
+                                            "title": "Edit"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }}
+                },
+                "relations": [{
+                    "relationName": "drViewHistory",
+                    "parentName": "ttContract",
+                    "childName": "ttContractHistory",
+                    "relationFields": [{
+                        "parentFieldName": "ContractId",
+                        "childFieldName": "ContractId"
+                    }]
+                }],
+                "operations": [
+                    {
+                        "name": "GetttContractHistory",
+                        "path": "\/GetttContractHistory",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsViewHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsViewHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsViewHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsViewHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsViewHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "GetttContract",
+                        "path": "\/GetttContract",
+                        "useBeforeImage": false,
+                        "type": "invoke",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "ttContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }]
+}

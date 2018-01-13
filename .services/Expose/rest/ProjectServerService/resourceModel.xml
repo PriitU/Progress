@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prgs:model xmlns:prgs="http://www.progress.com/caf/camel/component/prgrs" id="resourceModel">
+  <prgs:resource consumes="application/json" name="beContract" path="/beContract" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContract.pidl::com.progress.openedge.pdt.bpmbindings" name="beContract..UpdatebeContract" path="" produces="application/json" verb="PUT"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContract.pidl::com.progress.openedge.pdt.bpmbindings" name="beContract..ReadbeContract" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContract.pidl::com.progress.openedge.pdt.bpmbindings" name="beContract..DeletebeContract" path="" produces="application/json" verb="DELETE"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContract.pidl::com.progress.openedge.pdt.bpmbindings" name="beContract..CreatebeContract" path="" produces="application/json" verb="POST"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="beContractHistory" path="/beContractHistory" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContractHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beContractHistory..UpdatebeContractHistory" path="" produces="application/json" verb="PUT"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContractHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beContractHistory..ReadbeContractHistory" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContractHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beContractHistory..DeletebeContractHistory" path="" produces="application/json" verb="DELETE"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beContractHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beContractHistory..CreatebeContractHistory" path="" produces="application/json" verb="POST"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="beCustomer" path="/beCustomer" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomer.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomer..CreatebeCustomer" path="" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomer.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomer..DeletebeCustomer" path="" produces="application/json" verb="DELETE"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomer.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomer..ReadbeCustomer" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomer.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomer..UpdatebeCustomer" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="beCustomerContracts" path="/beCustomerContracts" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..CreatebeCustomerContracts" path="" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..ReadbeCustomerContracts" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..UpdatebeCustomerContracts" path="" produces="application/json" verb="PUT"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..DeletebeCustomerContracts" path="" produces="application/json" verb="DELETE"/>
+  </prgs:resource>
+  <prgs:resource name="beCustomerContracts_GetttCustomer" path="/beCustomerContracts/GetttCustomer">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..GetttCustomer" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource name="beCustomerContracts_GetttContract" path="/beCustomerContracts/GetttContract">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beCustomerContracts.pidl::com.progress.openedge.pdt.bpmbindings" name="beCustomerContracts..GetttContract" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="bePayments" path="/bePayments" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/bePayments.pidl::com.progress.openedge.pdt.bpmbindings" name="bePayments..ReadbePayments" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/bePayments.pidl::com.progress.openedge.pdt.bpmbindings" name="bePayments..DeletebePayments" path="" produces="application/json" verb="DELETE"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/bePayments.pidl::com.progress.openedge.pdt.bpmbindings" name="bePayments..UpdatebePayments" path="" produces="application/json" verb="PUT"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/bePayments.pidl::com.progress.openedge.pdt.bpmbindings" name="bePayments..CreatebePayments" path="" produces="application/json" verb="POST"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="beViewCustomerHistory" path="/beViewCustomerHistory" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..ReadbeViewCustomerHistory" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..UpdatebeViewCustomerHistory" path="" produces="application/json" verb="PUT"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..CreatebeViewCustomerHistory" path="" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..DeletebeViewCustomerHistory" path="" produces="application/json" verb="DELETE"/>
+  </prgs:resource>
+  <prgs:resource name="beViewCustomerHistory_GetttCustomer" path="/beViewCustomerHistory/GetttCustomer">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..GetttCustomer" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource name="beViewCustomerHistory_GetttCustomerHistory" path="/beViewCustomerHistory/GetttCustomerHistory">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewCustomerHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewCustomerHistory..GetttCustomerHistory" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="beViewHistory" path="/beViewHistory" produces="application/json">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..ReadbeViewHistory" path="" produces="application/json" verb="GET">
+      <prgs:param name="filter" type="QUERY"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..DeletebeViewHistory" path="" produces="application/json" verb="DELETE"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..CreatebeViewHistory" path="" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..UpdatebeViewHistory" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource name="beViewHistory_GetttContractHistory" path="/beViewHistory/GetttContractHistory">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..GetttContractHistory" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+  <prgs:resource name="beViewHistory_GetttContract" path="/beViewHistory/GetttContract">
+    <prgs:operation consumes="application/json" idls="Progress-master/.services/src/AppServer/beViewHistory.pidl::com.progress.openedge.pdt.bpmbindings" name="beViewHistory..GetttContract" path="" produces="application/json" verb="PUT"/>
+  </prgs:resource>
+</prgs:model>

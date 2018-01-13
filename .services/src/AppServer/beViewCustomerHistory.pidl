@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pidl:description targetNamespace="urn:schemas-progress-com:bpm:appserverbinding:0001" serviceType="wsad:OEAppServerInvoke" xmlns:wsad="urn:schemas-progress-com:bpm:appserverbinding:0001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pidl="http://www.progress.com/caf/idl1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://www.progress.com/adapters/idl1.0/javatype">
+<pidl:types>
+</pidl:types>
+  <pidl:interface name="com.progress.openedge.pdt.bpminterfaces">
+    <pidl:operation name="beViewCustomerHistory..CreatebeViewCustomerHistory" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:input>
+      <pidl:output messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="beViewCustomerHistory..DeletebeViewCustomerHistory" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:input>
+      <pidl:output messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="beViewCustomerHistory..GetttCustomer" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="filter" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="ttCustomer" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="beViewCustomerHistory..GetttCustomerHistory" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="filter" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="ttCustomerHistory" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="beViewCustomerHistory..ReadbeViewCustomerHistory" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="filter" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="beViewCustomerHistory..UpdatebeViewCustomerHistory" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:input>
+      <pidl:output messageLabel="dsViewCustomerHistory" req="false" type="java:Object">
+    </pidl:output>
+    </pidl:operation>
+  </pidl:interface>
+  <pidl:binding name="com.progress.openedge.pdt.bpmbindings" interface="wsad:com.progress.openedge.pdt.bpminterfaces" type="urn:schemas-progress-com:bpm:appserverbinding:0001">
+<wsad:Operation isPersistent="false" useFullName="false" executionMode="11">
+  <wsad:Name>beViewCustomerHistory</wsad:Name>
+  <wsad:ProcPath/>
+  <wsad:ProPath/>
+  <wsad:ProcExt>cls</wsad:ProcExt>
+  <wsad:ProcDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+    <wsad:Name>beViewCustomerHistory</wsad:Name>
+    <wsad:HelpString></wsad:HelpString>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>CreatebeViewCustomerHistory</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+        <wsad:Name>CreatebeViewCustomerHistory</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="true">
+          <wsad:Name>dsViewCustomerHistory</wsad:Name>
+          <wsad:OrigName>dsViewCustomerHistory</wsad:OrigName>
+          <wsad:Type>36</wsad:Type>
+          <wsad:Mode>3</wsad:Mode>
+          <wsad:DataSetMetaData>
+            <wsad:NamespaceUri xsi:nil="true"/>
+            <wsad:DataTable Name="ttCustomer" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataTable Name="ttCustomerHistory" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerHistoryId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>Edit</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataLink Name="drViewCustomerHistory" isNested="false" numFieldPairs="1">
+              <wsad:ParentBuffer>ttCustomer</wsad:ParentBuffer>
+              <wsad:ChildBuffer>ttCustomerHistory</wsad:ChildBuffer>
+              <wsad:FieldPairs>CustomerId,CustomerId</wsad:FieldPairs>
+            </wsad:DataLink>
+          </wsad:DataSetMetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>DeletebeViewCustomerHistory</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+        <wsad:Name>DeletebeViewCustomerHistory</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="true">
+          <wsad:Name>dsViewCustomerHistory</wsad:Name>
+          <wsad:OrigName>dsViewCustomerHistory</wsad:OrigName>
+          <wsad:Type>36</wsad:Type>
+          <wsad:Mode>3</wsad:Mode>
+          <wsad:DataSetMetaData>
+            <wsad:NamespaceUri xsi:nil="true"/>
+            <wsad:DataTable Name="ttCustomer" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataTable Name="ttCustomerHistory" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerHistoryId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>Edit</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataLink Name="drViewCustomerHistory" isNested="false" numFieldPairs="1">
+              <wsad:ParentBuffer>ttCustomer</wsad:ParentBuffer>
+              <wsad:ChildBuffer>ttCustomerHistory</wsad:ChildBuffer>
+              <wsad:FieldPairs>CustomerId,CustomerId</wsad:FieldPairs>
+            </wsad:DataLink>
+          </wsad:DataSetMetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>GetttCustomer</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>GetttCustomer</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>filter</wsad:Name>
+          <wsad:OrigName>filter</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>ttCustomer</wsad:Name>
+          <wsad:OrigName>ttCustomer</wsad:OrigName>
+          <wsad:Type>15</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+          <wsad:NamespaceUri xsi:nil="true"/>
+          <wsad:MetaData>
+            <wsad:FieldName>CustomerId</wsad:FieldName>
+            <wsad:Type>4</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>INTEGER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>IdCode</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>FirstName</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>LastName</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>GetttCustomerHistory</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>GetttCustomerHistory</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>filter</wsad:Name>
+          <wsad:OrigName>filter</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>ttCustomerHistory</wsad:Name>
+          <wsad:OrigName>ttCustomerHistory</wsad:OrigName>
+          <wsad:Type>15</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+          <wsad:NamespaceUri xsi:nil="true"/>
+          <wsad:MetaData>
+            <wsad:FieldName>CustomerHistoryId</wsad:FieldName>
+            <wsad:Type>4</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>INTEGER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>CustomerId</wsad:FieldName>
+            <wsad:Type>4</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>INTEGER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>FirstName</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>LastName</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>IdCode</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>Edit</wsad:FieldName>
+            <wsad:Type>1</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>CHARACTER</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>ReadbeViewCustomerHistory</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+        <wsad:Name>ReadbeViewCustomerHistory</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="true">
+          <wsad:Name>filter</wsad:Name>
+          <wsad:OrigName>filter</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="true">
+          <wsad:Name>dsViewCustomerHistory</wsad:Name>
+          <wsad:OrigName>dsViewCustomerHistory</wsad:OrigName>
+          <wsad:Type>36</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+          <wsad:DataSetMetaData>
+            <wsad:NamespaceUri xsi:nil="true"/>
+            <wsad:DataTable Name="ttCustomer" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataTable Name="ttCustomerHistory" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerHistoryId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>Edit</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataLink Name="drViewCustomerHistory" isNested="false" numFieldPairs="1">
+              <wsad:ParentBuffer>ttCustomer</wsad:ParentBuffer>
+              <wsad:ChildBuffer>ttCustomerHistory</wsad:ChildBuffer>
+              <wsad:FieldPairs>CustomerId,CustomerId</wsad:FieldPairs>
+            </wsad:DataLink>
+          </wsad:DataSetMetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>UpdatebeViewCustomerHistory</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+        <wsad:Name>UpdatebeViewCustomerHistory</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="true">
+          <wsad:Name>dsViewCustomerHistory</wsad:Name>
+          <wsad:OrigName>dsViewCustomerHistory</wsad:OrigName>
+          <wsad:Type>36</wsad:Type>
+          <wsad:Mode>3</wsad:Mode>
+          <wsad:DataSetMetaData>
+            <wsad:NamespaceUri xsi:nil="true"/>
+            <wsad:DataTable Name="ttCustomer" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataTable Name="ttCustomerHistory" hasBeforeTable="false">
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerHistoryId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>CustomerId</wsad:FieldName>
+                <wsad:Type>4</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>INTEGER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>FirstName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>LastName</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>IdCode</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>Edit</wsad:FieldName>
+                <wsad:Type>1</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+            </wsad:DataTable>
+            <wsad:DataLink Name="drViewCustomerHistory" isNested="false" numFieldPairs="1">
+              <wsad:ParentBuffer>ttCustomer</wsad:ParentBuffer>
+              <wsad:ChildBuffer>ttCustomerHistory</wsad:ChildBuffer>
+              <wsad:FieldPairs>CustomerId,CustomerId</wsad:FieldPairs>
+            </wsad:DataLink>
+          </wsad:DataSetMetaData>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+  </wsad:ProcDetail>
+</wsad:Operation>
+  </pidl:binding>
+</pidl:description>

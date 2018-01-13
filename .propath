@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<propath version="11.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/propath.xsd">
+<propathentry env="all" kind="dir" path="@{ROOT}" platform="All"/>
+<propathentry env="all" kind="lib" path="C:\Progress\OpenEdge\tty\OpenEdge.BusinessLogic.pl" platform="Windows"/>
+<propathentry env="all" kind="dir" path="@{ROOT}\src\AppServer" platform="All"/>
+<propathentry env="all" kind="dir" path="@{ROOT}\src" platform="All"/>
+</propath>
