@@ -14,6 +14,16 @@ TRIGGER PROCEDURE FOR WRITE OF Contract OLD BUFFER oldContract.
     MESSAGE Contract.ContractNr.
     MESSAGE oldContract.ContractNr.
 
+    IF Contract.ContractNr="" THEN
+        RETURN ERROR "Contract number cannot be empty".
+        
+    IF Contract.Amount <= 0 THEN
+        RETURN ERROR "Amount must be larger than 0".
+        
+    IF CAN-FIND(FIRST Customer NO-LOCK
+        WHERE Customer.CustomerId = Contract.CustomerId)=FALSE THEN
+            RETURN ERROR "Cannot find chosen customer.".
+        
     CREATE ContractHistory.
         ASSIGN 
             ContractHistory.ContractHistoryId = NEXT-VALUE(CONTRACTHISTORYID)
@@ -25,17 +35,18 @@ TRIGGER PROCEDURE FOR WRITE OF Contract OLD BUFFER oldContract.
             ContractHistory.TimeEnded = Contract.TimeEnded
             ContractHistory.Amount = Contract.Amount
             ContractHistory.AmountLeft = Contract.AmountLeft
+            ContractHistory.HistoryTime = NOW
             ContractHistory.PaymentDate = Contract.PaymentDate.
                  
     IF Contract.ContractNr <> oldContract.ContractNr THEN DO:     
-        ASSIGN 
+        ASSIGN
             Contract.AmountLeft = Contract.Amount   
             ContractHistory.Edit = "Create"
             ContractHistory.AmountLeft = Contract.AmountLeft.  
     END.
     ELSE DO:
         ASSIGN ContractHistory.Edit = "Update".
-    END.	
+    END.
     	
     	
 	
