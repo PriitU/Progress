@@ -134,6 +134,13 @@
                 <wsad:TypeName>CHARACTER</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
             </wsad:DataTable>
             <wsad:DataLink Name="drViewCustomerHistory" isNested="false" numFieldPairs="1">
               <wsad:ParentBuffer>ttCustomer</wsad:ParentBuffer>
@@ -227,6 +234,13 @@
                 <wsad:Type>1</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
             </wsad:DataTable>
@@ -346,6 +360,13 @@
             <wsad:TypeName>CHARACTER</wsad:TypeName>
             <wsad:XmlNodeType>0</wsad:XmlNodeType>
           </wsad:MetaData>
+          <wsad:MetaData>
+            <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+            <wsad:Type>34</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>DATETIME</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
         </wsad:Parameter>
       </wsad:MethodDetail>
     </wsad:InternalProc>
@@ -438,6 +459,13 @@
                 <wsad:Type>1</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
             </wsad:DataTable>
@@ -533,6 +561,13 @@
                 <wsad:Type>1</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>CHARACTER</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
             </wsad:DataTable>

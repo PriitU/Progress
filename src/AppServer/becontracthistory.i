@@ -21,18 +21,18 @@
 @openapi.openedge.entity.required (fields="ContractHistoryId,ContractId").
 	
 DEFINE TEMP-TABLE ttContractHistory BEFORE-TABLE bttContractHistory
-FIELD ContractHistoryId AS INTEGER
-FIELD CustomerId AS INTEGER
-FIELD ContractNr AS CHARACTER
-FIELD Amount AS INTEGER
-FIELD AmountLeft AS INTEGER
-FIELD ContractStatus AS INTEGER
-FIELD ContractId AS INTEGER
-FIELD TimeIn AS DATETIME
-FIELD TimeEnded AS DATETIME
-FIELD PaymentDate AS DECIMAL
-FIELD Edit AS CHARACTER
-INDEX ContractHistoryId IS  PRIMARY  UNIQUE  ContractHistoryId  ASCENDING . 
-
+    FIELD ContractHistoryId AS INTEGER
+    FIELD CustomerId AS INTEGER
+    FIELD ContractNr AS CHARACTER
+    FIELD Amount AS INTEGER
+    FIELD AmountLeft AS INTEGER
+    FIELD ContractStatus AS INTEGER
+    FIELD ContractId AS INTEGER
+    FIELD TimeIn AS DATETIME
+    FIELD TimeEnded AS DATETIME
+    FIELD PaymentDate AS DECIMAL
+    FIELD ContractHistoryTime AS DATETIME
+    FIELD Edit AS CHARACTER
+    INDEX ContractHistoryId IS  PRIMARY  UNIQUE  ContractHistoryId  ASCENDING. 
 
 DEFINE DATASET dsContractHistory FOR ttContractHistory.

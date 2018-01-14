@@ -1,6 +1,6 @@
 {
     "version": "1.4",
-    "lastModified": "Wed Jan 10 23:41:10 EET 2018",
+    "lastModified": "Sun Jan 14 08:58:22 EET 2018",
     "services": [{
         "name": "ProjectServerService",
         "address": "\/rest\/ProjectServerService",
@@ -168,172 +168,6 @@
                             },
                             {
                                 "name": "dsContract",
-                                "type": "RESPONSE_BODY"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "beContractHistory",
-                "path": "\/beContractHistory",
-                "autoSave": true,
-                "schema": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {"dsContractHistory": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {"ttContractHistory": {
-                            "type": "array",
-                            "primaryKey": ["ContractHistoryId"],
-                            "items": {
-                                "additionalProperties": false,
-                                "properties": {
-                                    "_id": {
-                                        "type": "string",
-                                        "semanticType": "Internal"
-                                    },
-                                    "_errorString": {
-                                        "type": "string",
-                                        "semanticType": "Internal"
-                                    },
-                                    "ContractHistoryId": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "ContractHistoryId",
-                                        "required": true
-                                    },
-                                    "CustomerId": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "CustomerId"
-                                    },
-                                    "ContractNr": {
-                                        "type": "string",
-                                        "ablType": "CHARACTER",
-                                        "default": "",
-                                        "title": "ContractNr"
-                                    },
-                                    "Amount": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "Amount"
-                                    },
-                                    "AmountLeft": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "AmountLeft"
-                                    },
-                                    "ContractStatus": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "ContractStatus"
-                                    },
-                                    "ContractId": {
-                                        "type": "integer",
-                                        "ablType": "INTEGER",
-                                        "default": 0,
-                                        "title": "ContractId",
-                                        "required": true
-                                    },
-                                    "TimeIn": {
-                                        "type": "string",
-                                        "ablType": "DATETIME",
-                                        "default": null,
-                                        "title": "TimeIn",
-                                        "format": "date-time"
-                                    },
-                                    "TimeEnded": {
-                                        "type": "string",
-                                        "ablType": "DATETIME",
-                                        "default": null,
-                                        "title": "TimeEnded",
-                                        "format": "date-time"
-                                    },
-                                    "PaymentDate": {
-                                        "type": "number",
-                                        "ablType": "DECIMAL",
-                                        "default": 0,
-                                        "title": "PaymentDate"
-                                    },
-                                    "Edit": {
-                                        "type": "string",
-                                        "ablType": "CHARACTER",
-                                        "default": "",
-                                        "title": "Edit"
-                                    }
-                                }
-                            }
-                        }}
-                    }}
-                },
-                "operations": [
-                    {
-                        "path": "",
-                        "useBeforeImage": true,
-                        "type": "update",
-                        "verb": "put",
-                        "params": [
-                            {
-                                "name": "dsContractHistory",
-                                "type": "REQUEST_BODY"
-                            },
-                            {
-                                "name": "dsContractHistory",
-                                "type": "RESPONSE_BODY"
-                            }
-                        ]
-                    },
-                    {
-                        "path": "?filter={filter}",
-                        "useBeforeImage": true,
-                        "type": "read",
-                        "verb": "get",
-                        "params": [
-                            {
-                                "name": "filter",
-                                "type": "QUERY"
-                            },
-                            {
-                                "name": "dsContractHistory",
-                                "type": "RESPONSE_BODY"
-                            }
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "useBeforeImage": true,
-                        "type": "delete",
-                        "verb": "delete",
-                        "params": [
-                            {
-                                "name": "dsContractHistory",
-                                "type": "REQUEST_BODY"
-                            },
-                            {
-                                "name": "dsContractHistory",
-                                "type": "RESPONSE_BODY"
-                            }
-                        ]
-                    },
-                    {
-                        "path": "",
-                        "useBeforeImage": true,
-                        "type": "create",
-                        "verb": "post",
-                        "params": [
-                            {
-                                "name": "dsContractHistory",
-                                "type": "REQUEST_BODY"
-                            },
-                            {
-                                "name": "dsContractHistory",
                                 "type": "RESPONSE_BODY"
                             }
                         ]
@@ -933,6 +767,13 @@
                                             "ablType": "CHARACTER",
                                             "default": "",
                                             "title": "Edit"
+                                        },
+                                        "ContractHistoryTime": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "ContractHistoryTime",
+                                            "format": "date-time"
                                         }
                                     }
                                 }
@@ -1211,6 +1052,13 @@
                                             "default": 0,
                                             "title": "PaymentDate"
                                         },
+                                        "ContractHistoryTime": {
+                                            "type": "string",
+                                            "ablType": "DATETIME",
+                                            "default": null,
+                                            "title": "ContractHistoryTime",
+                                            "format": "date-time"
+                                        },
                                         "Edit": {
                                             "type": "string",
                                             "ablType": "CHARACTER",
@@ -1327,6 +1175,179 @@
                             },
                             {
                                 "name": "ttContract",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "beContractHistory",
+                "path": "\/beContractHistory",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsContractHistory": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttContractHistory": {
+                            "type": "array",
+                            "primaryKey": ["ContractHistoryId"],
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "ContractHistoryId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractHistoryId",
+                                        "required": true
+                                    },
+                                    "CustomerId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "CustomerId"
+                                    },
+                                    "ContractNr": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "ContractNr"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "Amount"
+                                    },
+                                    "AmountLeft": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "AmountLeft"
+                                    },
+                                    "ContractStatus": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractStatus"
+                                    },
+                                    "ContractId": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "ContractId",
+                                        "required": true
+                                    },
+                                    "TimeIn": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeIn",
+                                        "format": "date-time"
+                                    },
+                                    "TimeEnded": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "TimeEnded",
+                                        "format": "date-time"
+                                    },
+                                    "PaymentDate": {
+                                        "type": "number",
+                                        "ablType": "DECIMAL",
+                                        "default": 0,
+                                        "title": "PaymentDate"
+                                    },
+                                    "ContractHistoryTime": {
+                                        "type": "string",
+                                        "ablType": "DATETIME",
+                                        "default": null,
+                                        "title": "ContractHistoryTime",
+                                        "format": "date-time"
+                                    },
+                                    "Edit": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "Edit"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "update",
+                        "verb": "put",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "?filter={filter}",
+                        "useBeforeImage": true,
+                        "type": "read",
+                        "verb": "get",
+                        "params": [
+                            {
+                                "name": "filter",
+                                "type": "QUERY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "delete",
+                        "verb": "delete",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
+                                "type": "RESPONSE_BODY"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "",
+                        "useBeforeImage": true,
+                        "type": "create",
+                        "verb": "post",
+                        "params": [
+                            {
+                                "name": "dsContractHistory",
+                                "type": "REQUEST_BODY"
+                            },
+                            {
+                                "name": "dsContractHistory",
                                 "type": "RESPONSE_BODY"
                             }
                         ]

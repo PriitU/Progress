@@ -20,11 +20,11 @@ BLOCK-LEVEL ON ERROR UNDO, THROW.
 
 
 /* ***************************  Main Block  *************************** */
-/*
+/*    
        FOR EACH ContractHistory WHERE ContractHistory.ContractStatus = 0:
            DELETE ContractHistory.
        END.
-       
+   
        FOR EACH CustomerHistory WHERE CustomerHistory.CustomerId >= 0:
            DELETE CustomerHistory.
        END.

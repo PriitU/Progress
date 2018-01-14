@@ -42,8 +42,9 @@ DEFINE TEMP-TABLE ttContractHistory BEFORE-TABLE bttContractHistory
     FIELD TimeIn AS DATETIME
     FIELD TimeEnded AS DATETIME
     FIELD PaymentDate AS DECIMAL
+    FIELD ContractHistoryTime AS DATETIME
     FIELD Edit AS CHARACTER
-    INDEX ContractHistoryId IS  PRIMARY  UNIQUE  ContractHistoryId  ASCENDING . 
+    INDEX ContractHistoryId IS  PRIMARY  UNIQUE  ContractHistoryId  ASCENDING. 
 
 DEFINE DATASET dsViewHistory
     FOR ttContract, ttContractHistory

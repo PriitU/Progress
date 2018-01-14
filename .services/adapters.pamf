@@ -486,11 +486,15 @@
         </lm:adapterDetails>
         <lm:productDetails name="ABL_DATA_OBJECT">
           <lm:properties>
-            <lm:properties name="ABL_DATA_OBJECT_SERVICE">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;oe_mobile>&lt;service>&lt;name>ProjectServerService&lt;/name>&lt;resources>&lt;path>src/AppServer/beContract.cls&lt;/path>&lt;path>src/AppServer/beContractHistory.cls&lt;/path>&lt;path>src/AppServer/beCustomer.cls&lt;/path>&lt;path>src/AppServer/beCustomerContracts.cls&lt;/path>&lt;path>src/AppServer/bePayments.cls&lt;/path>&lt;path>src/AppServer/beViewCustomerHistory.cls&lt;/path>&lt;path>src/AppServer/beViewHistory.cls&lt;/path>&lt;/resources>&lt;/service>&lt;/oe_mobile></lm:properties>
+            <lm:properties name="ABL_DATA_OBJECT_SERVICE">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;oe_mobile>&lt;service>&lt;name>ProjectServerService&lt;/name>&lt;resources>&lt;path>src/AppServer/beContract.cls&lt;/path>&lt;path>src/AppServer/beCustomer.cls&lt;/path>&lt;path>src/AppServer/beCustomerContracts.cls&lt;/path>&lt;path>src/AppServer/bePayments.cls&lt;/path>&lt;path>src/AppServer/beViewCustomerHistory.cls&lt;/path>&lt;path>src/AppServer/beViewHistory.cls&lt;/path>&lt;path>src/AppServer/beContractHistory.cls&lt;/path>&lt;/resources>&lt;/service>&lt;/oe_mobile></lm:properties>
           </lm:properties>
         </lm:productDetails>
       </lm:details>
-      <lm:nodes id="/ProjectServerService_groupingNode" name="ProjectServerService"/>
+      <lm:nodes id="/ProjectServerService_groupingNode" name="ProjectServerService">
+        <lm:details>
+          <lm:adapterDetails/>
+        </lm:details>
+      </lm:nodes>
       <lm:propertyDetails/>
     </lm:services>
   </lm:serviceCollection>

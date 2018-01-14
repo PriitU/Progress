@@ -198,6 +198,13 @@
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
               <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
                 <wsad:FieldName>Edit</wsad:FieldName>
                 <wsad:Type>1</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
@@ -360,6 +367,13 @@
                 <wsad:Type>5</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>DECIMAL</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
               <wsad:MetaData>
@@ -550,6 +564,13 @@
             <wsad:XmlNodeType>0</wsad:XmlNodeType>
           </wsad:MetaData>
           <wsad:MetaData>
+            <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+            <wsad:Type>34</wsad:Type>
+            <wsad:Extent>0</wsad:Extent>
+            <wsad:TypeName>DATETIME</wsad:TypeName>
+            <wsad:XmlNodeType>0</wsad:XmlNodeType>
+          </wsad:MetaData>
+          <wsad:MetaData>
             <wsad:FieldName>Edit</wsad:FieldName>
             <wsad:Type>1</wsad:Type>
             <wsad:Extent>0</wsad:Extent>
@@ -711,6 +732,13 @@
                 <wsad:Type>5</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>DECIMAL</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
               <wsad:MetaData>
@@ -876,6 +904,13 @@
                 <wsad:Type>5</wsad:Type>
                 <wsad:Extent>0</wsad:Extent>
                 <wsad:TypeName>DECIMAL</wsad:TypeName>
+                <wsad:XmlNodeType>0</wsad:XmlNodeType>
+              </wsad:MetaData>
+              <wsad:MetaData>
+                <wsad:FieldName>ContractHistoryTime</wsad:FieldName>
+                <wsad:Type>34</wsad:Type>
+                <wsad:Extent>0</wsad:Extent>
+                <wsad:TypeName>DATETIME</wsad:TypeName>
                 <wsad:XmlNodeType>0</wsad:XmlNodeType>
               </wsad:MetaData>
               <wsad:MetaData>

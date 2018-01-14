@@ -35,10 +35,10 @@ TRIGGER PROCEDURE FOR WRITE OF Contract OLD BUFFER oldContract.
             ContractHistory.TimeEnded = Contract.TimeEnded
             ContractHistory.Amount = Contract.Amount
             ContractHistory.AmountLeft = Contract.AmountLeft
-            ContractHistory.HistoryTime = NOW
+            ContractHistory.ContractHistoryTime = NOW
             ContractHistory.PaymentDate = Contract.PaymentDate.
                  
-    IF Contract.ContractNr <> oldContract.ContractNr THEN DO:     
+    IF Contract.ContractId <> oldContract.ContractId THEN DO:     
         ASSIGN
             Contract.AmountLeft = Contract.Amount   
             ContractHistory.Edit = "Create"
