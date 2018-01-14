@@ -1,0 +1,324 @@
+ADD TABLE "Contract"
+  AREA "Schema Area"
+  DUMP-NAME "contract"
+  TABLE-TRIGGER "CREATE" NO-OVERRIDE PROCEDURE "createContract.p" CRC "?"
+  TABLE-TRIGGER "DELETE" NO-OVERRIDE PROCEDURE "deleteContract.p" CRC "?"
+  TABLE-TRIGGER "WRITE" NO-OVERRIDE PROCEDURE "updateContract.p" CRC "?"
+
+ADD FIELD "ContractId" OF "Contract" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "ContractNr" OF "Contract" AS character
+  FORMAT "x(8)"
+  INITIAL ""
+  POSITION 3
+  MAX-WIDTH 16
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "CustomerId" OF "Contract" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "Amount" OF "Contract" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+  MANDATORY
+
+ADD FIELD "AmountLeft" OF "Contract" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 6
+  MAX-WIDTH 4
+  ORDER 50
+
+ADD FIELD "ContractStatus" OF "Contract" AS integer
+  FORMAT "99999"
+  INITIAL "0"
+  POSITION 7
+  MAX-WIDTH 4
+  ORDER 60
+
+ADD FIELD "TimeIn" OF "Contract" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 8
+  MAX-WIDTH 8
+  ORDER 70
+  MANDATORY
+
+ADD FIELD "TimeEnded" OF "Contract" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 9
+  MAX-WIDTH 8
+  ORDER 80
+
+ADD FIELD "PaymentDate" OF "Contract" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 10
+  MAX-WIDTH 8
+  ORDER 90
+
+ADD INDEX "ContractId" ON "Contract"
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "ContractId" ASCENDING
+
+ADD INDEX "ContractNr" ON "Contract"
+  AREA "Schema Area"
+  UNIQUE
+  INDEX-FIELD "ContractNr" ASCENDING
+
+ADD TABLE "ContractHistory"
+  AREA "Schema Area"
+  DUMP-NAME "contracthistory"
+
+ADD FIELD "ContractHistoryId" OF "ContractHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "CustomerId" OF "ContractHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+
+ADD FIELD "ContractNr" OF "ContractHistory" AS character
+  FORMAT "x(8)"
+  INITIAL ""
+  POSITION 4
+  MAX-WIDTH 20
+  ORDER 30
+
+ADD FIELD "Amount" OF "ContractHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+
+ADD FIELD "AmountLeft" OF "ContractHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 6
+  MAX-WIDTH 4
+  ORDER 50
+
+ADD FIELD "ContractStatus" OF "ContractHistory" AS integer
+  FORMAT "99999"
+  INITIAL "0"
+  POSITION 7
+  MAX-WIDTH 4
+  ORDER 60
+
+ADD FIELD "ContractId" OF "ContractHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 8
+  MAX-WIDTH 4
+  ORDER 70
+  MANDATORY
+
+ADD FIELD "TimeIn" OF "ContractHistory" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 9
+  MAX-WIDTH 8
+  ORDER 80
+
+ADD FIELD "TimeEnded" OF "ContractHistory" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 10
+  MAX-WIDTH 8
+  ORDER 90
+
+ADD FIELD "Edit" OF "ContractHistory" AS character
+  FORMAT "x(8)"
+  INITIAL ""
+  POSITION 12
+  MAX-WIDTH 50
+  ORDER 110
+
+ADD FIELD "PaymentDate" OF "ContractHistory" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 13
+  MAX-WIDTH 8
+  ORDER 120
+
+ADD INDEX "ContractHistoryId" ON "ContractHistory"
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "ContractHistoryId" ASCENDING
+
+ADD TABLE "Customer"
+  AREA "Schema Area"
+  DUMP-NAME "customer"
+  TABLE-TRIGGER "CREATE" NO-OVERRIDE PROCEDURE "createCustomer.p" CRC "?"
+  TABLE-TRIGGER "DELETE" NO-OVERRIDE PROCEDURE "deleteCustomer.p" CRC "?"
+  TABLE-TRIGGER "WRITE" NO-OVERRIDE PROCEDURE "updateCustomer.p" CRC "?"
+
+ADD FIELD "CustomerId" OF "Customer" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "FirstName" OF "Customer" AS character
+  FORMAT "A(30)"
+  INITIAL ""
+  POSITION 3
+  MAX-WIDTH 60
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "LastName" OF "Customer" AS character
+  FORMAT "A(30)"
+  INITIAL ""
+  POSITION 4
+  MAX-WIDTH 60
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "IdCode" OF "Customer" AS character
+  FORMAT "x(30)"
+  INITIAL ""
+  POSITION 5
+  MAX-WIDTH 60
+  ORDER 40
+  MANDATORY
+
+ADD INDEX "CustomerId" ON "Customer"
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CustomerId" ASCENDING
+
+ADD INDEX "IdCode" ON "Customer"
+  AREA "Schema Area"
+  UNIQUE
+  INDEX-FIELD "IdCode" ASCENDING
+
+ADD TABLE "CustomerHistory"
+  AREA "Schema Area"
+  DUMP-NAME "customerhistorynew"
+
+ADD FIELD "CustomerHistoryId" OF "CustomerHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+
+ADD FIELD "CustomerId" OF "CustomerHistory" AS integer
+  FORMAT "99,999,999"
+  INITIAL "0"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+
+ADD FIELD "FirstName" OF "CustomerHistory" AS character
+  FORMAT "A(30)"
+  INITIAL ""
+  POSITION 4
+  MAX-WIDTH 30
+  ORDER 30
+
+ADD FIELD "LastName" OF "CustomerHistory" AS character
+  FORMAT "A(30)"
+  INITIAL ""
+  POSITION 5
+  MAX-WIDTH 30
+  ORDER 40
+
+ADD FIELD "IdCode" OF "CustomerHistory" AS character
+  FORMAT "x(20)"
+  INITIAL ""
+  POSITION 6
+  MAX-WIDTH 20
+  ORDER 50
+
+ADD FIELD "Edit" OF "CustomerHistory" AS character
+  FORMAT "x(128)"
+  INITIAL ""
+  POSITION 7
+  MAX-WIDTH 128
+  ORDER 60
+
+ADD INDEX "CustomerHistoryId" ON "CustomerHistory"
+  AREA "Schema Area"
+  PRIMARY
+  INDEX-FIELD "CustomerHistoryId" ASCENDING
+
+ADD TABLE "PaymentHistory"
+  AREA "Schema Area"
+  DUMP-NAME "paymenthistory"
+  TABLE-TRIGGER "CREATE" NO-OVERRIDE PROCEDURE "createPayment.p" CRC "?"
+  TABLE-TRIGGER "WRITE" NO-OVERRIDE PROCEDURE "updatePayment.p" CRC "?"
+
+ADD FIELD "PaymentHistoryId" OF "PaymentHistory" AS integer
+  FORMAT "->>,>>9"
+  INITIAL "0"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "PaymentAmount" OF "PaymentHistory" AS integer
+  FORMAT "->>,>>9"
+  INITIAL "0"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "PaymentTime" OF "PaymentHistory" AS datetime
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  POSITION 4
+  MAX-WIDTH 8
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "ContractNr" OF "PaymentHistory" AS character
+  FORMAT "x(20)"
+  INITIAL ""
+  POSITION 5
+  MAX-WIDTH 20
+  ORDER 40
+  MANDATORY
+
+ADD INDEX "PaymentHistoryId" ON "PaymentHistory"
+  AREA "Schema Area"
+  PRIMARY
+  INDEX-FIELD "PaymentHistoryId" ASCENDING
+
+.
+PSC
+cpstream=UNDEFINED
+.
+0000007723
