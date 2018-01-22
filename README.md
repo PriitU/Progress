@@ -32,6 +32,13 @@ IdCode
 FirstName
 LastName
 Edit
+### CustomerHistory
+CustomerHistoryId
+CustomerId
+IdCode
+FirstName
+LastName
+Edit
 ### Contract
 ContractId
 ContractNr
@@ -67,7 +74,8 @@ Aktiveerib jada CUSTOMERID millega omistatakse tabelil primaarse võtme väärtu
 ### updateCustomer
 Kutsutakse välja kliendi uuendamisel.
 Kirjutatakse baasi uus CustomerHistory rida.
-määratakse muutust kirjeldav sõna.
+Määratakse muutust kirjeldav sõna.
+Andmete valideerimine
 ### deleteCustomer
 Kutsutakse välja kliendi kustutmisel.
 Otsib ega kliendil lepinguid pole ja annab veateate kui on.
@@ -82,6 +90,7 @@ Logisse kirjutakse info.
 Vaadatkase kas ajalugu on varem olemas.
 Kui on siis edit tulp = "Create”.
 Vastasel juhul  = "Update".
+Andmete valideerimine
 ### deleteContract
 Kutsutakse välja lepingu kustutamisel.
 Trigger kontrollib, kui leping on veel aktiivne lepingu kustutamist ei lubata ning kasutaja saab veateate “Cannot delete active contract.”.
@@ -100,3 +109,4 @@ Vajadusel muudetakse lepingu staatust 2 kui jääk 0.
 Logitakse makse.
 Luuakse lepingu muudatuse kohta ajalugu.
 Kui esineb viga siis antakse veateade.
+Andmete valideerimine
