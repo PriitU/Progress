@@ -21,78 +21,42 @@ Makseid saab kasutaja ainult lisada. Iga makse lisamisel seotakse makse lepingug
 
 ## Tabelid
 ### Customer
-CustomerId
-IdCode
-FirstName
-LastName
-CustomerHistory
-CustomerHistoryId
-CustomerId
-IdCode
-FirstName
-LastName
-Edit
+CustomerId, IdCode, FirstName, LastName, CustomerHistory, CustomerHistoryId, CustomerId, IdCode, FirstName, LastName, Edit
 ### CustomerHistory
-CustomerHistoryId
-CustomerId
-IdCode
-FirstName
-LastName
-Edit
+CustomerHistoryId, CustomerId, IdCode, FirstName, LastName, Edit
 ### Contract
-ContractId
-ContractNr
-CustomerId
-TimeIn
-TimeEnded
-ContractStatus
-Amount
-AmountLeft
-PaymentDate
+ContractId, ContractNr, CustomerId, TimeIn, TimeEnded, ContractStatus, Amount, AmountLeft, PaymentDate
 ### ContractHistory
-ContractHistoryId
-ContractId
-ContractNr
-CustomerId
-TimeIn
-TimeEnded
-ContractStatus
-Amount
-AmountLeft
-PaymentDate
-Edit
+ContractHistoryId, ContractId, ContractNr, CustomerId, TimeIn, TimeEnded, ContractStatus, Amount, AmountLeft, PaymentDate, Edit
 ### PaymentHistory
-PaymentHistoryId
-PaymentAmount
-PaymentTime
-ContractNr
+PaymentHistoryId, PaymentAmount, PaymentTime, ContractNr
 
 ## Triggerid 
 ### createCustomer
-Kutsutakse välja kliendi loomisel.
+Kutsutakse välja kliendi loomisel.  
 Aktiveerib jada CUSTOMERID millega omistatakse tabelil primaarse võtme väärtus.
 ### updateCustomer
-Kutsutakse välja kliendi uuendamisel.
-Kirjutatakse baasi uus CustomerHistory rida.
-Määratakse muutust kirjeldav sõna.
-Andmete valideerimine
+Kutsutakse välja kliendi uuendamisel.  
+Kirjutatakse baasi uus CustomerHistory rida.  
+Määratakse muutust kirjeldav sõna.  
+Andmete valideerimine.
 ### deleteCustomer
-Kutsutakse välja kliendi kustutmisel.
-Otsib ega kliendil lepinguid pole ja annab veateate kui on.
-Kui ei ole lepinguid siis kustuta kasutaja ajalugu.
+Kutsutakse välja kliendi kustutmisel.  
+Otsib ega kliendil lepinguid pole ja annab veateate kui on.  
+Kui ei ole lepinguid siis kustuta kasutaja ajalugu.  
 Tagasta sõnum logisse ajaloo kustutamisest.
 ### createContract
-Kutsutakse välja lepingu loomisel.
+Kutsutakse välja lepingu loomisel.  
 Aktiveerib jada CONTRACTID, millega omistatakse tabelil primaarse võtme väärtus.
 ### updateContract
-Kutsutakse välja lepingu uuendamisel.
-Logisse kirjutakse info.
-Vaadatkase kas ajalugu on varem olemas.
-Kui on siis edit tulp = "Create”.
-Vastasel juhul  = "Update".
-Andmete valideerimine
+Kutsutakse välja lepingu uuendamisel.  
+Logisse kirjutakse info.  
+Vaadatkase kas ajalugu on varem olemas.  
+Kui on siis edit tulp = "Create”.  
+Vastasel juhul  = "Update".  
+Andmete valideerimine.
 ### deleteContract
-Kutsutakse välja lepingu kustutamisel.
+Kutsutakse välja lepingu kustutamisel.  
 Trigger kontrollib, kui leping on veel aktiivne lepingu kustutamist ei lubata ning kasutaja saab veateate “Cannot delete active contract.”.
 Kui leping ei ole aktiivne ning kustutamine on lubatud, siis kustutatakse ka kogu lepingu ajalugu.
 ### createPayment
